@@ -82,11 +82,7 @@ mkdir Images
 
 ## ⚙️ Environment Setup
 
-The application uses MongoDB Atlas for database connection. The connection string is configured in `server.js`:
-
-```javascript
-mongodb+srv://dxvnee:DTuzSPD1ip0vDr1C@artpediadb.cdylyrm.mongodb.net/Art?retryWrites=true&w=majority&appName=CreopediaDB
-```
+The application uses MongoDB Atlas for database connection. The connection string is configured in `server.js`.
 
 > **Note**: For production use, it's recommended to move the database connection string to environment variables using a `.env` file.
 
@@ -96,8 +92,10 @@ Create a `.env` file in the root directory:
 
 ```env
 PORT=3800
-MONGODB_URI=your_mongodb_connection_string
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/DatabaseName?retryWrites=true&w=majority
 ```
+
+Replace `username`, `password`, `cluster`, and `DatabaseName` with your actual MongoDB Atlas credentials.
 
 ## 🏃 Running the Application
 
@@ -118,7 +116,7 @@ The server will start on port **3800** (or the port specified in `PORT` environm
 You should see:
 ```
 Connected to database!
-Server started on port 3000
+Server started on port 3800
 ```
 
 Visit `http://localhost:3800` to verify the API is running. You should see:
